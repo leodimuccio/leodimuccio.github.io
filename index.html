@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.content-insert').load("content/01/01.txt");
+		$('.content-insert').load("/content/01/01.txt");
+		$('.content-insert').load("../content/01/01.txt");
+		$('.content-insert').load("./content/01/01.txt");
+		jQuery.get('http://localhost/content/01/01.txt', function(data) {
+    alert(data);
+});
+	</script>
+</head>
+<body>
+	<div class="content-insert">
+		
+	</div>
+</body>
+</html>
